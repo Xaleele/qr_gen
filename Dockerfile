@@ -1,13 +1,6 @@
 # Use official Python runtime as base image
 FROM python:3.9
 
-Run apt-get update && \
-    apt-get install -y \
-    xvfb \
-    xauth \
-    x11-xserver-utils \
-    tk
-
 # Set working directory inside the container
 WORKDIR /app
 
@@ -17,12 +10,12 @@ COPY requirements.txt .
 # Install Python dependencies from requirements file
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set the entry point script for X11 forwarding
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# Copy the Flask application files into container
+COPY qr_gen_flask.py .
+COPY templates templates
 
-# Copy Python script into container
-COPY qr_gen.py .
+# Expose a port for the Flask application to run on
+EXPOSE 8080
 
 # Set command to run qr generator script
-CMD ["/entrypoint.sh"]
+CMD ["python", "qr_gen_flask.py"]
