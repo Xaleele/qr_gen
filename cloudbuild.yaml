@@ -1,8 +1,7 @@
-secrets:
-- secretManager: 
-    secretId: 'SECRET_KEY'
-    version: 
-     - latest
+availableSecrets:
+  secretManager:
+    - versionName: 'projects/876748653486/secrets/quokka-secrets'
+
 steps:
   # Build the custom container image
 - name: 'gcr.io/cloud-builders/docker'
