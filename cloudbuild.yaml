@@ -10,7 +10,7 @@ steps:
   args:
   - run
   - --filename=quokka-engine.yaml
-  - --images=gcr.io/$PROJECT_ID/quokkaqr
+  - --image=gcr.io/$PROJECT_ID/quokkaqr
   - --location=us-west1-a
   - --cluster=quokka-engine
   - --namespace=quokka-qr-prod
