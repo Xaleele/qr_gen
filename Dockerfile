@@ -10,9 +10,6 @@ COPY requirements.txt .
 # Install Python dependencies from requirements file
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set the secret key environment variable
-ENV SECRET_KEY=projects/876748653486/secrets/quokka-secrets 
-
 # Copy the Flask application files into container
 COPY qr_gen_flask.py .
 COPY templates templates
