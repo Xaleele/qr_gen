@@ -5,8 +5,8 @@ availableSecrets:
 steps:
   # Build the custom container image
 - name: 'gcr.io/cloud-builders/docker'
+  secretEnv: ['SECRET_KEY=$$SECRET_KEY']
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/quokkaqr', '--build-arg', 'SECRET_KEY=$$SECRET_KEY', '.']
-  secretEnv: ['SECRET_KEY']
   # Push the custom container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/quokkaqr']
