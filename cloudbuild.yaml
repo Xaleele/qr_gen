@@ -1,6 +1,8 @@
 secrets:
-- name: 'SECRET_KEY'
-  version: 'latest'
+- secretManager: 
+    secretId: 'SECRET_KEY'
+    version: 
+     - latest
 steps:
   # Build the custom container image
 - name: 'gcr.io/cloud-builders/docker'
