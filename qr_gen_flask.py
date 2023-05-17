@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 import pyqrcode
 from PIL import Image
@@ -6,8 +7,11 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
-app = Flask(__name__)
+# Retrieve the secret key from the environment variable
+secret_key = os.environ.get('SECRET_KEY')
 
+app = Flask(__name__)
+app.secret_key = secret_key
 # Define the QRCodeForm class
 class QRCodeForm(FlaskForm):
     link_name = StringField('Link Name', validators=[DataRequired()])
