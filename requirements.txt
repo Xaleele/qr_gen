@@ -2,3 +2,4 @@ flask
 pyqrcode
 Pillow
 pypng
+Flask-WTF

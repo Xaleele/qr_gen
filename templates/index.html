@@ -2,15 +2,19 @@
 <html>
     <head>
         <title>QR Code Generator</title>
+        <style>
+            body {
+                background-color: #D269IE; /* Autumn color */
+            }
+        </style>
     </head>
     <body>
         <h1>QR Code Generator</h1>
-        <form action="/generate" method="POST">
-          <label for="link_name">Link Name:</label>
-          <input type="text" name="link_name" id="link_name" required><br><br>
-          <label for="link">Link URL:</label>
-          <input type="text" name="link" id="link" required><br><br>
-          <input type="submit" value="Generate QR Code">
+        <form action="{{ url_for('generate') }}" method="POST">
+            {{ form.csrf_token }}
+            {{ form.link_name.label }} {{ form.link_name() }}<br><br>
+            {{ form.link.label }} {{ form.link() }}<br><br>
+            {{ form.submit() }}
         </form>
     </body>
 </html>
