@@ -12,6 +12,7 @@ spec:
       labels:
         app: gcp
     spec:
+      serviceAccountName: 876748653486-compute@developer.gserviceaccount.com
       containers:
       - name: quokka-qr-gke
         image: gcr.io/quokka-qr-project/quokkaqr:latest
