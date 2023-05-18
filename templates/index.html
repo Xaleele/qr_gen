@@ -11,10 +11,13 @@
     <body>
         <h1>QR Code Generator</h1>
         <form action="{{ url_for('generate') }}" method="POST">
-            {{ form.csrf_token }}
-            {{ form.link_name.label }} {{ form.link_name() }}<br><br>
-            {{ form.link.label }} {{ form.link() }}<br><br>
-            {{ form.submit() }}
+            <label for="link_name">Link Name</label>
+            <input type="text" id="link_name" name="link_name" required><br><br>
+            
+            <label for="link">Link URL</label>
+            <input type="text" id="link" name="link" required><br><br>
+
+            <input type="submit" value="Generate QR Code">
         </form>
     </body>
 </html>

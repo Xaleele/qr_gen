@@ -2,5 +2,3 @@ flask
 pyqrcode
 Pillow
 pypng
-Flask-WTF
-google-cloud-secret-manager
