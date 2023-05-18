@@ -12,7 +12,7 @@ spec:
       labels:
         app: gcp
     spec:
-      serviceAccountName: Compute Engine default service account
+      serviceAccountName: secret-service-account
       containers:
       - name: quokka-qr-gke
         image: gcr.io/quokka-qr-project/quokkaqr:latest
