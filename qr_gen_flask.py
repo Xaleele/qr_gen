@@ -16,7 +16,7 @@ class QRCodeForm(FlaskForm):
     link = StringField('Link URL', validators=[DataRequired()])
     submit = SubmitField('Generate QR Code')
 
-@app.before_first_request
+@app.before_request
 def get_secret_key():
     # Create Secret Manager client
     client = secretmanager.SecretManagerServiceClient()
