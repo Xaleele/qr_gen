@@ -22,7 +22,7 @@ def get_secret_key():
     client = secretmanager.SecretManagerServiceClient()
 
     # Retrieve the secret value
-    project_id = '876748653486' 
+    project_id = 'quokka-qr-project' 
     secret_name = 'quokka-secrets'
     version_id = 'latest'
     name = f"projects/{project_id}/{secret_name}/versions/{version_id}"
