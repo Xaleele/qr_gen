@@ -8,7 +8,7 @@ from wtforms.validators import DataRequired
 from google.cloud import secretmanager
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = None
+app.config['SECRET_KEY'] = '8C18CF6A3683CD57E72751FF53847'
 
 # Define the QRCodeForm class
 class QRCodeForm(FlaskForm):
