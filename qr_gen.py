@@ -1,4 +1,4 @@
-from tkinter import *
+""""from tkinter import *
 import pyqrcode
 from PIL import ImageTk, Image
 
@@ -34,5 +34,5 @@ canvas.create_window(200, 180, window=link_entry)
 button = Button(text="Generate QR code", command=generate)
 canvas.create_window(200, 230, window=button)
 
-root.mainloop()
+root.mainloop()""""""
 

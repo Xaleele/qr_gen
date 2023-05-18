@@ -30,7 +30,7 @@ def get_secret_key():
     secret_value = response.payload.data.decode("UTF-8")
 
     # Set the secret value as the app's secret key
-    app.config['SECRET_KEY'] = secret_value
+    app.config['SECRET_KEY'] = '8C18CF6A3683CD57E72751FF53847'
 
 @app.route('/')
 def index():
