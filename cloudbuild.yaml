@@ -11,6 +11,6 @@ steps:
   - run
   - --filename=quokka-engine.yaml
   - --image=gcr.io/$PROJECT_ID/quokkaqr
-  - --location=us-west1
+  - --location=us-west1-a
   - --cluster=quokka-engine
   - --namespace=quokka-qr-prod
